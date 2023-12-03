@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <title>City</title>
+</head>
+<body>
+    {% include "partials/_header.html" %}
+    <h1 class="title">City of {{ contract | capitalize }}</h1>
+    <div class="iframeBlock">{{ iframe|safe }}</div>
+    <div class="city-list">
+        {% if infos %}
+            {% for info in infos %}
+                <a href="/{{ info.contractName }}/{{ info.number }}" class="city">{{ info.name }}</a>
+            {% endfor %}
+        {% else %}
+                <p class="city"><strong>Problem API : </strong>Querying for this city returns an empty array at the moment</p>
+        {% endif %}
+    </div>
+</body>
+</html>

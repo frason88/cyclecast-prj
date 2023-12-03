@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <title>Ranking by city</title>
+</head>
+<body>
+    {% include "partials/_header.html" %}
+    <h1 class="title">Ranking by city</h1>
+
+    <div class="section">
+        {% for info in stations %}
+            {% if loop.index <= 50 %}
+                <a class="stat-block" href="/classement/{{ info[0] }}">
+                    <div class="number">
+                        <h2>{{ loop.index }}</h2>
+                    </div>
+                    <div>
+                        <p><strong>City : </strong>{{ info[0] | capitalize }}</p>
+                        <p><strong>Bike stand : </strong>{{ info[1] }}</p>
+                        <p><strong>Bike(s) : </strong>{{ info[2] }} ({{info[3]}} bicycles are available)</p>
+                        <p><strong>Electric bike(s) available : </strong>{{ info[4] }} ({{ info[5] }})</p>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
