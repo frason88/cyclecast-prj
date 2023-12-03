@@ -1,14 +1,19 @@
 # Cyclecast-Projet:
 
-Introduction
+## Introduction
 This repository contains a Python project for interacting with the JcDecaux API to collect and analyze data from bike-sharing stations. It includes scripts for data collection, analysis, and visualization.
 
-Prerequisites
+## Prerequisites
 Before running the project, ensure you have the following installed:
 
-Python 3.x
-MongoDB
-Required Python libraries: pymongo, requests, matplotlib, numpy
+- Python 3.x
+- MongoDB
+
+## Required Python libraries: 
+- pymongo,
+- requests,
+- matplotlib,
+- numpy
 
 ---------------------------------------------------------------------------------
 
@@ -24,8 +29,7 @@ Install required packages:
 pip install pymongo requests matplotlib numpy
 
 3. Set Up MongoDB:
-Ensure MongoDB is installed and running on your system.
-By default, the project connects to MongoDB at mongodb://localhost:27017/. Adjust the connection settings in the script if your setup is different.
+Ensure MongoDB is installed and running on your system. By default, the project connects to MongoDB at mongodb://localhost:27017/. Adjust the connection settings in the script if your setup is different.
 
 4. API Key Configuration:
 Obtain an API key from JcDecaux.
