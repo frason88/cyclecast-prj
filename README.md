@@ -1,4 +1,4 @@
-README for Cyclecast-Projet:
+# Cyclecast-Projet:
 
 Introduction
 This repository contains a Python project for interacting with the JcDecaux API to collect and analyze data from bike-sharing stations. It includes scripts for data collection, analysis, and visualization.
